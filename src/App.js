@@ -20,7 +20,7 @@ function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="items" element={<MarketPage />} />
           <Route path="additem" element={<AddItemPage />} />
-          <Route path='/products/items/:itemId' element={<ItemDetailPage />} />
+          <Route path='items/:itemId' element={<ItemDetailPage />} />
           <Route path="community" element={<CommunityFeedPage />} />
         </Routes>
       </div>
