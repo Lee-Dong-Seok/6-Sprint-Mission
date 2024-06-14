@@ -21,8 +21,8 @@ function ItemComments() {
   // timeAgo 나중에 따로 파일로 관리 할 예정입니다...ㅜ
   const timeAgo = (date) => {
     const now = new Date();
-    const createdAt = new Date(date);
-    const difference = now - createdAt;
+    const updatedAt = new Date(date);
+    const difference = now - updatedAt;
 
     const seconds = Math.floor(difference / 1000);
     const minutes = Math.floor(seconds / 60);
@@ -40,7 +40,6 @@ function ItemComments() {
     if (months < 12) return `${months}개월 전`;
     return `${years}년 전`;
   };
-
   return (
     <Container>
       {comments && comments.length > 0 ? (
@@ -52,7 +51,7 @@ function ItemComments() {
                 <UserImg src={item.writer.image} alt="userimage" />
                 <UserInfo>
                   <UserName>{item.writer.nickname}</UserName>
-                  <Time>{timeAgo(item.createdAt)}</Time>
+                  <Time>{timeAgo(item.updatedAt)}</Time>
                 </UserInfo>
               </AskUserArea>
             </UserCommentsArea>
