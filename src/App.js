@@ -7,6 +7,7 @@ import CommunityFeedPage from "./pages/CommunityFeedPage/CommunityFeedPage";
 import Header from "./components/Layout/Header";
 import ItemDetailPage from './pages/MarketPage/components/ItemDetailPage';
 
+
 function App() {
   return (
     <BrowserRouter>
